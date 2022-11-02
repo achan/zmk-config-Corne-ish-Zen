@@ -2,12 +2,12 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: caksoylar
-      url-base: https://github.com/caksoylar
+    - name: achan
+      url-base: https://github.com/achan
   projects:
-    - name: zmk
-      remote: caksoylar
-      revision: caksoylar/zen-8bit+experimental
+    - name: zmk-config-Corne-ish-Zen
+      remote: achan
+      revision: achan/feature/3x5
       import: app/west.yml
   self:
     path: config
