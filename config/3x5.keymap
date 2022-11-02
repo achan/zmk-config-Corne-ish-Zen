@@ -7,12 +7,10 @@
 #endif
 
 // Layer aliases
-#define DEF 0
-#define CLM 1
-#define GME 2
-#define SYM 3
-#define NAV 4
-#define FUN 5
+#define BASE 0
+#define SYMB 1
+#define NUMB 2
+#define FUNC 3
 
 // Desktop and tab navigation shortcuts
 #define D_LT   LC(LG(LEFT))
@@ -128,118 +126,76 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            label = "DEF";
+            label = "BASE";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &aml LCTRL A  &aml LGUI S   &aml LALT D   &asl LSHFT F  &kp G             &kp H         &asr RSHFT J  &amr RALT K   &amr RGUI L   &amr RCTRL SQT
+     &aml LCTRL A  &aml LALT S   &aml LGUI D   &asl LSHFT F  &kp G             &kp H         &asr RSHFT J  &amr RGUI K   &amr RALT L   &amr RCTRL SQT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp SLASH
+     &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp RET
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                 &mt LGUI TAB  &mt LCTRL ESC &lt NAV BSPC      &lt SYM SPACE &mt RSHFT RET &mt RALT DEL
+                                          &mo FUNC &none &lt SYMB SPACE         &mo NUMB       &none          &mo FUNC
 #else
-                                               &mt LCTRL ESC &lt NAV BSPC      &lt SYM SPACE &mt RSHFT RET
+                                                &mo FUNC &lt SYMB SPACE         &mo NUMB       &mo FUNC
 #endif
 //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
 
-        colemak_layer {
-            label = "CLM";
+        symbols_layer {
+            label = "SYMB";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp Q         &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT
+     &none         &none         &kp CARET     &kp QMARK     &kp GRAVE         &kp LBKT      &kp LT        &kp EQUAL     &kp GT        &kp RBKT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &aml LCTRL A  &aml LGUI R   &aml LALT S   &asl LSHFT T  &kp G             &kp M         &asr RSHFT N  &amr RALT E   &amr RGUI I   &amr RCTRL O
+     &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT         &kp LBRC      &kp LPAR      &kp COLON     &kp RPAR      &kp RBRC
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH
+     &kp BLSH      &kp TILDE     &kp PIPE      &kp AMPS      &kp SEMI          &kp FSLH      &kp STAR      &kp MINUS     &kp PLUS      &kp UNDER
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                 &mt LGUI TAB  &mt LCTRL ESC &lt NAV BSPC      &lt SYM SPACE &mt RSHFT RET &mt RALT DEL
+                                          &mo FUNC &none &lt SYMB SPACE         &mo NUMB       &none          &mo FUNC
 #else
-                                               &mt LCTRL ESC &lt NAV BSPC      &lt SYM SPACE &mt RSHFT RET
+                                                &mo FUNC &lt SYMB SPACE         &mo NUMB       &mo FUNC
 #endif
 //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
 
-        game_layer {
-            label = "GME";
+        numbers_layer {
+            label = "NUMB";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp TAB       &kp Q         &kp W         &kp E         &kp R             &kp Y         &kp U         &kp I         &kp O         &kp P
+     &none         &none         &none         &none         &none             &kp PG_UP     &kp PG_DN     &kp HOME      &kp END       &kp C_VOL_UP
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp ESC       &kp A         &kp S         &kp D         &kp F             &kp H         &kp J         &kp K         &kp L         &tog GME
+     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp C_VOL_DN
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp LSHFT     &kp Z         &kp X         &kp C         &kp V             &kp N         &kp M         &kp COMMA     &kp DOT       &kp SLASH
+     &kp N6        &kp N7        &kp N8        &kp N9        &kp N0            &none         &none         &none         &none         &kp C_MUTE
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                 &kp LCTRL     &kp LALT      &kp SPACE         &mo NAV       &kp RET       &tog GME
+                                          &mo FUNC &none &lt SYMB SPACE         &mo NUMB       &none          &mo FUNC
 #else
-                                               &kp LALT      &kp SPACE         &mo NAV       &kp RET
+                                                &mo FUNC &lt SYMB SPACE         &mo NUMB       &mo FUNC
 #endif
 //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
 
-        symbol_layer {
-            label = "SYM";
+        functions_layer {
+            label = "FUNC";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT         &kp BSLH      &kp N7        &kp N8        &kp N9        &kp COMMA
+     &kp LS(LC(LA(LG(A)))) &kp LS(LC(LA(LG(G)))) &kp LS(LC(LA(LG(S)))) &kp LS(LC(LA(LG(X)))) &kp LS(LC(LA(LG(F)))) &none &none &none &none &none 
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp PLUS      &kp EQUAL     &kp UNDER     &kp MINUS     &kp CARET         &kp N0        &kp N4        &kp N5        &kp N6        &kp DOT
+     &kp LS(LC(LA(LG(W)))) &kp LS(LC(LA(LG(C)))) &kp LS(LC(LA(LG(D)))) &none &none &none     &none         &none         &none         &none 
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none         &none         &inv_qm       &kp STAR      &kp AMPS          &kp SEMI      &kp N1        &kp N2        &kp N3        &kp SLASH
+     &none         &none         &none         &none         &none             &none         &none         &none         &none         &none
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                 &kp LGUI      &kp SPACE     &trans            &trans        &kp LSHFT     &kp RALT
+                                          &mo FUNC &none &lt SYMB SPACE         &mo NUMB       &none          &mo FUNC
 #else
-                                               &kp SPACE     &trans            &trans        &kp LSHFT
-#endif
-//                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
-            >;
-        };
-
-        nav_layer {
-            label = "NAV";
-            bindings = <
-// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp LA(F4)    &kp TAB_LT    &kp TAB_RT    &kp LC(F4)    &kp C_VOL_UP      &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &none
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp LCTRL     &kp LGUI      &kp LALT      &mt LSHFT TAB &kp C_VOL_DN      &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp C_AL_CALC
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &none         &kp LS(TAB)   &swapper      &kp LS(INS)   &kp C_PP          &kp INS       &kp DEL       &kp C_PREV    &kp C_NEXT    &none
-// ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-#ifdef THREE_THUMBS
-                                 &kp LGUI      &kp LCTRL     &trans            &trans        &kp LSHFT     &kp RALT
-#else
-                                               &kp LCTRL     &trans            &trans        &kp LSHFT
-#endif
-//                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
-            >;
-        };
-
-        function_layer {
-            label = "FUN";
-            bindings = <
-// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp CAPS      &none         &to DEF       &to CLM       &to GME
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp F6        &kp F7        &kp F8        &kp F9        &kp F10           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-#ifdef EXTERNAL_POWER
-     &none         &kp D_LT      &kp D_RT      &kp F11       &kp F12           &out OUT_USB  &out OUT_BLE &ext_power EP_ON &ext_power EP_OFF &bt BT_CLR
-#else
-     &none         &kp D_LT      &kp D_RT      &kp F11       &kp F12           &out OUT_USB  &out OUT_BLE  &kp PSCRN    &kp PAUSE_BREAK &bt BT_CLR
-#endif
-// ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-#ifdef THREE_THUMBS
-                                 &bootloader   &reset        &trans            &trans        &reset        &bootloader
-#else
-                                               &reset        &trans            &trans        &reset
+                                                &mo FUNC &lt SYMB SPACE         &mo NUMB       &mo FUNC
 #endif
 //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
