@@ -49,7 +49,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "ALPHA_MT_L";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -72,7 +72,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "ALPHA_MT_R";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
