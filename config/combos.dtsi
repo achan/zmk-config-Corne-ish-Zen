@@ -1,0 +1,31 @@
+/*                KEY POSITIONS
+
+  ╭────────────────────╮ ╭────────────────────╮
+  │  0   1   2   3   4 │ │  5   6   7   8   9 │
+  │ 10  11  12  13  14 │ │ 15  16  17  18  19 │
+  │ 20  21  22  23  24 │ │ 25  26  27  28  29 │
+  ╰───────────╮ 30  31 │ │ 32  33 ╭───────────╯
+              ╰────────╯ ╰────────╯            */
+
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP) \
+        combo_##NAME { \
+            timeout-ms = <TERM>; \
+            bindings = <BINDINGS>; \
+            key-positions = <KEYPOS>; \
+            layers = <LAYERS>; \
+			global-quick-tap-ms = <QUICKTAP>; \
+        };
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+COMBO(clt,    &kp LT,       15 16, BASE, 40, 100)
+COMBO(cgt,    &kp GT,       17 18, BASE, 40, 100)
+COMBO(ccol,   &kp COLON,    16 17, BASE, 40, 100)
+COMBO(cesc,   &kp ESC,      23 24, BASE, 40, 100)
+COMBO(ctab,   &kp TAB,      13 14, BASE, 40, 100)
+COMBO(cbsp,   &kp BSPC,     12 13, BASE, 40, 100)
+COMBO(capswd, &caps_word,    8  9, BASE, 40, 100)
+    };
+};
