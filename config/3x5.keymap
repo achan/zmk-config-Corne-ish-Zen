@@ -123,7 +123,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT         &kp LBRC      &kp LPAR      &kp COLON     &kp RPAR      &kp RBRC
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp BLSH      &kp TILDE     &kp PIPE      &kp AMPS      &kp SEMI          &kp FSLH      &kp STAR      &kp MINUS     &kp PLUS      &kp UNDER
+     &kp BSLH      &kp TILDE     &kp PIPE      &kp AMPS      &kp SEMI          &kp FSLH      &kp STAR      &kp MINUS     &kp PLUS      &kp UNDER
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
                                           &mo FUNC &none &lt SYMB SPACE         &mo NUMB       &none          &mo FUNC
