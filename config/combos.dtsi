@@ -26,6 +26,5 @@ COMBO(ccol,   &kp COLON,    16 17, BASE, 40, 100)
 COMBO(cesc,   &kp ESC,      23 24, BASE, 40, 100)
 COMBO(ctab,   &kp TAB,      13 14, BASE, 40, 100)
 COMBO(cbsp,   &kp BSPC,     12 13, BASE, 40, 100)
-COMBO(capswd, &caps_word,    8  9, BASE, 40, 100)
     };
 };

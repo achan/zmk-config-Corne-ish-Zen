@@ -49,7 +49,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "ALPHA_MT_L";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -61,7 +61,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "ALPHA_SFT_L";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -72,7 +72,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "ALPHA_MT_R";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -84,7 +84,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "ALPHA_SFT_R";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -107,7 +107,7 @@
      &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp RET
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                    &none       &mo FUNC    &lt SYMB SPACE      &mo NUMB       &mo FUNC       &none          
+                                    &none       &mo FUNC    &lt SYMB SPACE      &mo NUMB       &mo FUNC     &caps_word          
 #else
                                                 &mo FUNC &lt SYMB SPACE         &mo NUMB       &mo FUNC
 #endif
@@ -126,7 +126,7 @@
      &kp BSLH      &kp TILDE     &kp PIPE      &kp AMPS      &kp SEMI          &kp FSLH      &kp STAR      &kp MINUS     &kp PLUS      &kp UNDER
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                    &none       &mo FUNC    &lt SYMB SPACE      &mo NUMB       &mo FUNC       &none          
+                                    &none       &mo FUNC    &lt SYMB SPACE      &mo NUMB       &mo FUNC     &caps_word          
 #else
                                                 &mo FUNC    &lt SYMB SPACE      &mo NUMB       &mo FUNC
 #endif
@@ -145,7 +145,7 @@
      &kp N6        &kp N7        &kp N8        &kp N9        &kp N0            &none         &none         &none         &none         &kp C_MUTE
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                    &none       &mo FUNC    &lt SYMB SPACE      &mo NUMB       &mo FUNC       &none          
+                                    &none       &mo FUNC    &lt SYMB SPACE      &mo NUMB       &mo FUNC     &caps_word          
 #else
                                                 &mo FUNC &lt SYMB SPACE         &mo NUMB       &mo FUNC
 #endif
