@@ -35,7 +35,7 @@
 };
 
 &lt {
-    flavor = "balanced";
+    flavor = "tap-preferred";
     tapping-term-ms = <150>;
 };
 
@@ -107,9 +107,9 @@
      &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp RET
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                    &none       &mo FUNC    &lt SYMB SPACE      &mo NUMB       &mo FUNC     &caps_word          
+                                    &none       &mo FUNC    &lt SYMB SPACE   &lt NUMB &none    &mo FUNC     &caps_word          
 #else
-                                                &mo FUNC &lt SYMB SPACE         &mo NUMB       &mo FUNC
+                                                &mo FUNC &lt SYMB SPACE      &lt NUMB &none    &mo FUNC
 #endif
 //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
@@ -126,7 +126,7 @@
      &kp BSLH      &kp TILDE     &kp PIPE      &kp AMPS      &kp SEMI          &kp FSLH      &kp STAR      &kp MINUS     &kp PLUS      &kp UNDER
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                    &none       &mo FUNC    &lt SYMB SPACE      &mo NUMB       &mo FUNC     &caps_word          
+                                    &none       &mo FUNC    &lt SYMB SPACE   &lt NUMB &none    &mo FUNC     &caps_word
 #else
                                                 &mo FUNC    &lt SYMB SPACE      &mo NUMB       &mo FUNC
 #endif
@@ -145,7 +145,7 @@
      &kp N6        &kp N7        &kp N8        &kp N9        &kp N0            &none         &none         &none         &none         &kp C_MUTE
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                    &none       &mo FUNC    &lt SYMB SPACE      &mo NUMB       &mo FUNC     &caps_word          
+                                    &none       &mo FUNC    &lt SYMB SPACE      &mo NUMB       &mo FUNC     &caps_word
 #else
                                                 &mo FUNC &lt SYMB SPACE         &mo NUMB       &mo FUNC
 #endif
@@ -164,7 +164,7 @@
      &none         &none         &none         &none         &none             &none         &none         &none         &none         &none
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                          &mo FUNC &none &lt SYMB SPACE         &mo NUMB       &none          &mo FUNC
+                                    &none       &mo FUNC    &lt SYMB SPACE   &lt NUMB &none    &mo FUNC     &caps_word
 #else
                                                 &mo FUNC &lt SYMB SPACE         &mo NUMB       &mo FUNC
 #endif
