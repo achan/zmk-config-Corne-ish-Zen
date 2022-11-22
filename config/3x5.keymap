@@ -126,7 +126,7 @@
      &kp BSLH      &kp TILDE     &kp PIPE      &kp AMPS      &kp SEMI          &kp FSLH      &kp STAR      &kp MINUS     &kp PLUS      &kp UNDER
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                    &none       &mo FUNC    &lt SYMB SPACE   &lt NUMB &none    &mo FUNC     &caps_word
+                                    &none       &mo FUNC    &lt SYMB SPACE   &lt NUMB &none    &mo FUNC     &none
 #else
                                                 &mo FUNC    &lt SYMB SPACE      &mo NUMB       &mo FUNC
 #endif
@@ -142,10 +142,10 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp C_VOL_DN
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp N6        &kp N7        &kp N8        &kp N9        &kp N0            &none         &none         &none         &none         &kp C_MUTE
+     &kp N6        &kp N7        &kp N8        &kp N9        &kp N0            &caps_word    &none         &none         &none         &kp C_MUTE
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                    &none       &mo FUNC    &lt SYMB SPACE      &mo NUMB       &mo FUNC     &caps_word
+                                    &none       &mo FUNC    &lt SYMB SPACE      &mo NUMB       &mo FUNC     &none
 #else
                                                 &mo FUNC &lt SYMB SPACE         &mo NUMB       &mo FUNC
 #endif
@@ -164,7 +164,7 @@
      &none         &none         &none         &none         &none             &none         &none         &none         &none         &none
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                    &none       &mo FUNC    &lt SYMB SPACE   &lt NUMB &none    &mo FUNC     &caps_word
+                                    &none       &mo FUNC    &lt SYMB SPACE   &lt NUMB &none    &mo FUNC     &none
 #else
                                                 &mo FUNC &lt SYMB SPACE         &mo NUMB       &mo FUNC
 #endif
