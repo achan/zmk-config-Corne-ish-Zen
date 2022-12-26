@@ -104,10 +104,10 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &aml LCTRL A  &aml LALT S   &aml LGUI D   &asl LSHFT F  &kp G             &kp H         &asr RSHFT J  &amr RGUI K   &amr RALT L   &amr RCTRL SQT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp RET
+     &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &caps_word
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                    &none       &mo FUNC    &lt SYMB SPACE   &lt NUMB &none    &mo FUNC     &caps_word          
+                                    &none       &mo FUNC    &lt SYMB SPACE   &lt NUMB &none    &mo FUNC     &none          
 #else
                                                 &mo FUNC &lt SYMB SPACE      &lt NUMB &none    &mo FUNC
 #endif
